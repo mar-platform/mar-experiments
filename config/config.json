@@ -1,0 +1,36 @@
+{
+    embeddings: {
+	glove: "$(W2V_MDE)/glove_modelling/vectors.txt"
+    },
+    types: {
+	"ecore": {
+	    mrank: {
+		similarity: 0.5472,
+		UninstantiableClassSmell: -0.0625,
+		IsolatedClassSmell: -0.2567,
+		OverLoadedClassSmell: -0.2553,
+		ReferredAlotClassSmell: -0.2145,
+		RefersAlotClassSmell: -0.1213,
+		DepthHierarchySmell: -0.0958,
+		OnlyOneClassSuperSmell: -0.0785,
+		TooManyChildrenSmell: -0.1368,
+		TooLongNamesSmell: -0.0276,
+		IrrelevantClassSmell: -0.3061
+            }
+	}
+    },
+    repositories: {    
+	"repo-ecore-all" : {
+	    type: "ecore",
+	    origin: "github",
+	    repo_root  : "/home/jesus/projects/mde-ml/mde-datasets/repo-ecore-all/",
+	    crawler_db : "/home/jesus/projects/mde-ml/mar-experiments-new/crawler.db",
+	    model_db   : "/home/jesus/projects/mde-ml/mar-experiments-new/analysis.db",
+            
+	    graph_length : 3,
+	    graph_filter: EcoreFilter,
+	    graph_factory: EcoreFactory
+	}
+
+    }
+}
