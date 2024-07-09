@@ -227,6 +227,11 @@ def main(args):
                                  'enumLiterals', 'annotations'])
 
     experiments = get_experiments(dmutants, dataset)
+
+    #import random
+    #random.seed(10)
+    #experiments = random.sample(experiments, 200)
+    
     perform_evaluation(experiments, dmutants_txt)
 
 

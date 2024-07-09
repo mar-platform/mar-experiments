@@ -1,6 +1,7 @@
 {
     embeddings: {
-	glove: "$(W2V_MDE)/glove_modelling/vectors.txt"
+	glove: "$(W2V_MDE)/glove_modelling/vectors.txt",
+	fasttext: "$(W2V_MDE)/fasttext_bin/fasttext_model.bin"
     },
     types: {
 	"ecore": {
